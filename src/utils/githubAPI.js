@@ -3,7 +3,11 @@ import axios from "axios";
 const BASE_URL = "https://api.github.com/search/repositories";
 
 export const fetchRandomRepo = async (language = "") => {
-  const query = language ? `language:${language}` : "stars:>1000";
+  const query = "language:English stars:>1000";
+  if (language) {
+    query += ` language:${language}`;
+  }
+
   const url = `${BASE_URL}?q=${query}&sort=stars&order=desc`;
 
   try {
