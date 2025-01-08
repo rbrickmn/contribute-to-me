@@ -4,11 +4,11 @@ const RepoCard = ({ repo }) => {
   if (!repo) return null;
 
   return (
-    <div className="max-w-md p-4 border rounded-lg shadow-lg bg-white">
+    <div className="max-w-md p-4 rounded-lg shadow-lg bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-100">
       <h2 className="text-xl font-bold">{repo.name}</h2>
-      <p className="text-gray-700">{repo.description}</p>
-      <div className="mt-2">
-        <span className="inline-block px-3 py-1 text-sm bg-gray-200 rounded">
+      <p className="mt-1 mb-1">{repo.description}</p>
+      <div className="mt-2 select-none">
+        <span className="inline-block px-3 py-1 text-sm bg-gray-100 text-gray-800 dark:bg-gray-500 dark:text-gray-100 rounded">
           {repo.language || "Unknown"}
         </span>
         <span className="ml-2 text-sm">⭐ {repo.stargazers_count}</span>
@@ -17,7 +17,7 @@ const RepoCard = ({ repo }) => {
         href={repo.html_url}
         target="_blank"
         rel="noopener noreferrer"
-        className="block mt-4 text-blue-500 hover:underline"
+        className="block mt-2 text-blue-500 hover:underline"
       >
         View on GitHub
       </a>
