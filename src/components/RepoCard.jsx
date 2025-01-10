@@ -7,7 +7,7 @@ const RepoCard = ({ repo }) => {
   const lastUpdated = new Date(repo.updated_at).toLocaleDateString();
 
   return (
-    <div className="max-w-md p-4 rounded-lg shadow-lg bg-white text-gray-800 dark:bg-gray-700 dark:text-gray-100">
+    <div className="min-w-[300px] max-w-[400px] w-full p-4 rounded-lg shadow-lg bg-white text-gray-800 dark:bg-gray-700 dark:text-gray-100">
       <h2 className="text-xl font-bold">{repo.name}</h2>
       <p className="mt-1 mb-1">{repo.description || "No description available."}</p>
 
