@@ -4,11 +4,11 @@ const RepoCard = ({ repo }) => {
   if (!repo) return null;
 
   return (
-    <div className="max-w-md p-4 rounded-lg shadow-lg bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-100">
+    <div className="max-w-md p-4 rounded-lg shadow-lg bg-white text-gray-800 dark:bg-gray-700 dark:text-gray-100">
       <h2 className="text-xl font-bold">{repo.name}</h2>
       <p className="mt-1 mb-1">{repo.description}</p>
       <div className="mt-2 select-none">
-        <span className="inline-block px-3 py-1 text-sm bg-gray-100 text-gray-800 dark:bg-gray-500 dark:text-gray-100 rounded">
+        <span className="inline-block px-3 py-1 text-sm bg-white text-gray-800 dark:bg-gray-500 dark:text-gray-100 rounded">
           {repo.language || "Unknown"}
         </span>
         <span className="ml-2 text-sm">⭐ {repo.stargazers_count}</span>
